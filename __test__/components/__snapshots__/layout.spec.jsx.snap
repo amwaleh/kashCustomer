@@ -12,15 +12,23 @@ exports[`Layout should render without throwing an error 1`] = `
   <header />
   <Grid>
     <GridRow className=\\"topNavRow\\" color=\\"teal\\">
-      <Menu fluid={true}>
-        <MenuItem name=\\"log out\\" position=\\"right\\" onClick={[Function]} />
+      <Menu fluid={true} color=\\"purple\\">
+        <MenuItem icon=\\"power\\" name=\\"log out\\" position=\\"right\\" onClick={[Function]} />
       </Menu>
     </GridRow>
     <GridRow className=\\"sidebarNav\\">
       <GridColumn as={[Function: Menu]} width={2} color=\\"teal\\">
-        <div className=\\"spacer\\" />
+        <div className=\\"spacer\\">
+          <Header as=\\"h2\\" icon={true}>
+            <Icon name=\\"user circle\\" inverted={true} as=\\"i\\" />
+            Customer Dashboard
+            <HeaderSubheader>
+              Manage customer Details.
+            </HeaderSubheader>
+          </Header>
+        </div>
         <MenuItem icon=\\"home\\" name=\\"home\\" link={true} href=\\"/home\\" />
-        <MenuItem icon=\\"add user\\" name=\\"add customer\\" link={true} href=\\"/create_customer\\" />
+        <MenuItem icon=\\"add user\\" name=\\"add customer\\" link={true} href=\\"/customer\\" />
       </GridColumn>
       <GridColumn width={12}>
          

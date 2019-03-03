@@ -72,8 +72,8 @@ exports[`Pages Index should render without throwing an error 1`] = `
 exports[`Pages List Customers should render without throwing an error 1`] = `
 "<Grid as={[Function: Container]}>
   <GridRow columns={3}>
-    <CustomerCard details={{...}} />
-    <CustomerCard details={{...}} />
+    <CustomerCard details={{...}} onClick={[Function: onClick]} />
+    <CustomerCard details={{...}} onClick={[Function: onClick]} />
   </GridRow>
   <GridRow>
     <GridColumn width={10} floated=\\"right\\">

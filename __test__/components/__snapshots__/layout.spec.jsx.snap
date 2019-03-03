@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should render without throwing an error 1`] = `
+"<div>
+  <Head>
+    <title>
+      WooCom
+    </title>
+    <meta charSet=\\"utf-8\\" />
+    <meta name=\\"viewport\\" content=\\"initial-scale=1.0, width=device-width\\" />
+  </Head>
+  <header />
+  <Grid>
+    <GridRow className=\\"topNavRow\\" color=\\"teal\\">
+      <Menu fluid={true}>
+        <MenuItem name=\\"log out\\" position=\\"right\\" onClick={[Function]} />
+      </Menu>
+    </GridRow>
+    <GridRow className=\\"sidebarNav\\">
+      <GridColumn as={[Function: Menu]} width={2} color=\\"teal\\">
+        <div className=\\"spacer\\" />
+        <MenuItem icon=\\"home\\" name=\\"home\\" link={true} href=\\"/home\\" />
+        <MenuItem icon=\\"add user\\" name=\\"add customer\\" link={true} href=\\"/create_customer\\" />
+      </GridColumn>
+      <GridColumn width={12}>
+         
+      </GridColumn>
+    </GridRow>
+  </Grid>
+</div>"
+`;

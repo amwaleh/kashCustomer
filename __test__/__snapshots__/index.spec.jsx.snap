@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pages Customers should render Populated fields 1`] = `
+"<Grid as={[Function: Container]} style={{...}}>
+  <Form onSubmit={[Function: onSubmit]} as=\\"form\\">
+    <Grid>
+      <Header as=\\"h3\\" color=\\"teal\\">
+        Personal info:
+      </Header>
+      <Section section={{...}} onChange={[Function]} />
+      <Header as=\\"h3\\" color=\\"teal\\">
+        Billing:
+      </Header>
+      <Section section={{...}} onChange={[Function]} />
+      <Header as=\\"h3\\" color=\\"teal\\">
+        Shipping:
+      </Header>
+      <Section section={{...}} onChange={[Function]} />
+      <GridRow>
+        <div className=\\"submitButtons\\">
+          <FormButton size=\\"medium\\" content=\\"submit\\" color=\\"green\\" type=\\"submit\\" as={[Function: FormField]} control={[Function: Button]} />
+        </div>
+      </GridRow>
+    </Grid>
+  </Form>
+</Grid>"
+`;
+
+exports[`Pages Customers should render without throwing an error 1`] = `
+"<Grid as={[Function: Container]} style={{...}}>
+  <Form onSubmit={[Function: onSubmit]} as=\\"form\\">
+    <Grid>
+      <Header as=\\"h3\\" color=\\"teal\\">
+        Personal info:
+      </Header>
+      <Section section={{...}} onChange={[Function]} />
+      <Header as=\\"h3\\" color=\\"teal\\">
+        Billing:
+      </Header>
+      <Section section={{...}} onChange={[Function]} />
+      <Header as=\\"h3\\" color=\\"teal\\">
+        Shipping:
+      </Header>
+      <Section section={{...}} onChange={[Function]} />
+      <GridRow>
+        <div className=\\"submitButtons\\">
+          <FormButton size=\\"medium\\" content=\\"submit\\" color=\\"green\\" type=\\"submit\\" as={[Function: FormField]} control={[Function: Button]} />
+        </div>
+      </GridRow>
+    </Grid>
+  </Form>
+</Grid>"
+`;
+
+exports[`Pages Index should render without throwing an error 1`] = `
+"<Grid as={[Function: Container]} className=\\"centered loginBg\\" padded=\\"vertically\\">
+  <div className=\\"ErrotMsg\\" />
+  <Form onSubmit={[Function]} className=\\"formLogin\\" as=\\"form\\">
+    <Header as=\\"h3\\" color=\\"teal\\">
+      Login
+    </Header>
+    <FormInput name=\\"username\\" onChange={[Function]} type=\\"text\\" placeholder=\\"username\\" required={true} as={[Function: FormField]} control={[Function: Input]} />
+    <FormInput name=\\"password\\" onChange={[Function]} type=\\"password\\" placeholder=\\"password\\" required={true} as={[Function: FormField]} control={[Function: Input]} />
+    <Button type=\\"submit\\" content=\\"Login\\" color=\\"green\\" as=\\"button\\" />
+    <a onClick={[Function]} className=\\"toggleButton\\" href=\\"#\\">
+      click to sign Up
+    </a>
+  </Form>
+</Grid>"
+`;
+
+exports[`Pages List Customers should render without throwing an error 1`] = `
+"<Grid as={[Function: Container]}>
+  <GridRow columns={3}>
+    <CustomerCard details={{...}} />
+    <CustomerCard details={{...}} />
+  </GridRow>
+  <GridRow>
+    <GridColumn width={10} floated=\\"right\\">
+      <Pagination boundaryRange={0} defaultActivePage={1} ellipsisItem={{...}} firstItem={{...}} lastItem={{...}} siblingRange={1} totalPages={10} onPageChange={[Function]} aria-label=\\"Pagination Navigation\\" nextItem={{...}} pageItem={{...}} prevItem={{...}} />
+    </GridColumn>
+  </GridRow>
+</Grid>"
+`;

@@ -28,8 +28,8 @@ app
           password: req.body.password
         })
         .then(data => {
-          return res.sendStatus(200)
-        }).catch(error => {throw error})
+          return res.sendStatus(201)
+        }).catch(error => res.status(400).json(error))
 
     })
 
@@ -39,8 +39,8 @@ app
              username: req.body.username,
              password: req.body.password
            })
-           .then(({ success }) => {
-             if (success) res.sendStatus(200)
+           .then((data) => {
+             if (data.success) res.status(200).json(data)
              else res.sendStatus(401)
            })
        })

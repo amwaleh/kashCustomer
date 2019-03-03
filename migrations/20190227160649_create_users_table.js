@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments('id')
     table.string('username').unique().notNullable();
     table.string('salt');
-    table.specificType('password', 'char(60)').notNullable();
+    table.specificType('password', 'char(255)').notNullable();
   }).then(() => console.log("table created"))
     .catch((err) => { console.log(err); throw err })
     .finally(() => {

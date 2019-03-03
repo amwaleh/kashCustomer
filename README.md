@@ -1,29 +1,50 @@
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/zeit/next.js/tree/master/examples/with-semantic-ui)
 
-# Semantic UI example
 
-## How to use
 
-### Using `create-next-app`
+### Download
 
-Execute [`create-next-app`](https://github.com/segmentio/create-next-app) with [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) or [npx](https://github.com/zkat/npx#readme) to bootstrap the example:
+git clone this repo
 
 ```bash
-npx create-next-app --example with-semantic-ui with-semantic-ui-app
-# or
-yarn create next-app --example with-semantic-ui with-semantic-ui-app
+git clone <repo>
 ```
 
-### Download manually
+# Install it and run:
 
-Download the example:
+you will need
+- node v9+
+- MySQL
 
+## Setup Woocommerce
+- You need to install [WooCommerce API](https://woocommerce.github.io/woocommerce-rest-api-docs/#introduction) on your wordpress site. Plugin installation instruction can be found [here](https://docs.woocommerce.com/document/installing-uninstalling-woocommerce/)
+
+## Generete your woocommerce customer secret and customer key
+ Follow this [instruction](https://woocommerce.github.io/woocommerce-rest-api-docs/#authentication) to generate the keys
+ - Create a `.env ` file in your root directory and paste the key and the url to your site as follows
+ ```bash
+ #.env
+WOOCOMERCE_URL=<your.wordpress.site>
+WOO_CUSTOMER_SECRET=cs_XXXX
+WOO_CUSTOMER_KEY=ck_XXXX
+
+ ```
+
+# database connection
+to you `.env` file add the following variable and set the mysql user and password running on your local instance
 ```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/with-semantic-ui
-cd with-semantic-ui
+DB_HOST=127.0.0.1
+DB_USER=<db_user>
+DB_PASS=<db_password>
+DB_NAME=<db_name>
 ```
+## Run migrations
+In your terminal run
+`knex migrate:latest`
 
-Install it and run:
+
+# Starting the app
+
+Nb: make sure that your wordpress site  running woocommerce API is up and running.
 
 ```bash
 npm install
@@ -33,16 +54,7 @@ yarn
 yarn dev
 ```
 
-Deploy it to the cloud with [now](https://zeit.co/now) ([download](https://zeit.co/download))
+# Create user :
+on the login page click on the `click to signup ` link to create an account
 
-```bash
-now
-```
-
-## The idea behind the example
-
-This example shows how to use Next.js along with [Semantic UI React](http://react.semantic-ui.com) including handling of external styles and assets. This is intended to show the integration of this UI toolkit with the Framework.
-
-
-## run migrations
-`knex migrate:latest
+- if the registration goes through click on the `click to login `link and login

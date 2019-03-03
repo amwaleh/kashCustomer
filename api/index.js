@@ -1,9 +1,10 @@
 import WC from 'woocommerce-api';
-
-const CONSUMER_KEY = 'ck_56b0079d96857d6d5c1e062c5d961da03e0cc73c';
-const CONSUMER_SECRET = 'cs_8015c08cce2f6407c19e7e9a345a22028a9baef9';
+const WOOCOMERCE_URL = process.env.WOOCOMERCE_URL
+const CONSUMER_KEY = process.env.WOO_CUSTOMER_KEY;
+const CONSUMER_SECRET = process.env.WOO_CUSTOMER_SECRET ;
+debugger
 const WooCommerce = new WC({
-  url: 'http://woo.localhost/',
+  url: `http://${WOOCOMERCE_URL}/`,
   verifySsl: false,
   consumerKey: CONSUMER_KEY,
   consumerSecret: CONSUMER_SECRET,

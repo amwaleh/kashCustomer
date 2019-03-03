@@ -1,8 +1,12 @@
 import React, { Component } from 'react'
 import AuthService from './AuthService'
+import Layout from '../components/layout'
+import { Loader } from "semantic-ui-react";
+
+const WOOCOMMERCE_URL = process.env.WOOCOMERCE_URL
 
 export default function withAuth(AuthComponent) {
-  const Auth = new AuthService('http://localhost:3000')
+  const Auth = new AuthService()
 
   return class Authenticated extends Component {
     constructor(props) {
@@ -17,20 +21,22 @@ export default function withAuth(AuthComponent) {
     componentDidMount() {
       if (!Auth.loggedIn()) {
         console.log(this.props)
-        this.props.url.replaceTo('/')
+        window.location='/'
       }
       this.setState({ isLoading: false })
     }
 
     render() {
       return (
-        <div>
+
+          <Layout>
           { this.state.isLoading ? (
-            <div>LOADING....</div>
+            <Loader size='massive'>Loading</Loader>
           ) : (
-              <AuthComponent { ...this.props } auth={ Auth } />
+            <AuthComponent { ...this.props } auth={ Auth } />
             ) }
-        </div>
+        </Layout>
+
       )
     }
   }
